@@ -1,0 +1,56 @@
+name: Deploy website to S3 and Invalidate CloudFront
+
+on:
+  push:
+    branches:
+      - main
+      - dev  # Also trigger for development branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write  # Required for OIDC authentication
+      contents: read
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies & Build Website
+        run: |
+          npm install
+          npm run build
+
+      - name: Set Deployment Variables
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            echo "AWS_ROLE_ARN=arn:aws:iam::713881828008:role/GitHubDeployRole" >> $GITHUB_ENV
+            echo "S3_BUCKET=jp-cloud-resume" >> $GITHUB_ENV
+            echo "CLOUDFRONT_DISTRIBUTION=E1CPLV8JE0T7PX" >> $GITHUB_ENV
+          else
+            echo "AWS_ROLE_ARN=arn:aws:iam::664418960959:role/GitHubDeployRole" >> $GITHUB_ENV
+            echo "S3_BUCKET=jp-website-bucket-dev" >> $GITHUB_ENV
+            echo "CLOUDFRONT_DISTRIBUTION=E1W4D15N1YMVK1" >> $GITHUB_ENV
+          fi
+
+      - name: Assume AWS Role
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: us-west-1
+
+      - name: Sync Built Files to S3 (Only Content of dist/)
+        run: |
+          aws s3 sync ./dist/ s3://${{ env.S3_BUCKET }}/ --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --paths "/*"
+
