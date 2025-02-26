@@ -1,0 +1,26 @@
+.about {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: #222; */
+    color: var(--text-color);
+    width: 700px;
+    line-height: 1.8;
+}
+
+.about-header h2 {
+    margin-bottom: 10px;
+}
+
+.about-content h3 {
+    text-decoration: underline;
+}
+
+.about-content ul {
+    margin: 10px 0;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

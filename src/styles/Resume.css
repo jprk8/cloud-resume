@@ -1,0 +1,82 @@
+.resume {
+    font-family: Montserrat;
+    padding: 40px 20px;
+    width: 888px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--text-color);
+    line-height: 1.75;
+    background-color: #222;
+}
+
+.resume-header {
+    background-color: #21232e;
+    color: white;
+    margin: -40px -20px;
+    padding: 10px 20px;
+    border-bottom: 3px solid rgb(153, 126, 59);
+}
+
+.resume-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.education {
+    margin-top: 30px;
+}
+
+.education,
+.work {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.education-title,
+.work-title {
+    border-bottom: 1px solid var(--text-color);
+    margin-bottom: -10px;
+    font-weight: 600;
+}
+
+.school {
+    display: flex;
+    justify-content: space-between;
+}
+
+.school-name {
+    font-weight: 600;
+}
+
+.study,
+.school-year {
+    font-weight: 400;
+}
+
+.cert-title {
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-color);
+    margin-bottom: 5px;
+}
+
+.cert-container {
+    display: flex;
+    gap: 10px;
+}
+
+ul.cert-list,
+ul.work-list {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.work-entry-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company {
+    font-weight: 600;
+}

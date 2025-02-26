@@ -1,0 +1,16 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    margin-bottom: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}

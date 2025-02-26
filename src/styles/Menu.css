@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    gap: 60px;
+    background-color: #272727;
+    padding: 25px 40px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.menu-btn {
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    border-bottom: 1px solid var(--text-color);
+}
