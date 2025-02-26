@@ -6,7 +6,7 @@ export default function Resume() {
             <div className='resume-header'>
                 <div className='resume-name'>John J. Park</div>
                 <div className='resume-contact'>
-                    ❖ San Diego, CA
+                    ❖ San Diego, CA ❖ johnjpark.com
                 </div>
             </div>
             <div className='education'>
@@ -15,7 +15,7 @@ export default function Resume() {
                 </div>
                 <div className='school'>
                     <div className='school-name'>
-                        California Institute of Applied Technology<br/>
+                        <b>California Institute of Applied Technology</b><br/>
                         <span className='study'>Cloud Administration Program</span>
                     </div>
                     <div className='school-year'>
@@ -24,7 +24,7 @@ export default function Resume() {
                 </div>
                 <div className='school'>
                     <div className='school-name'>
-                        University of California, Riverside<br/>
+                        <b>University of California, Riverside</b><br/>
                         <span className='study'>B.S. Information Systems</span>
                     </div>
                     <div className='school-year'>
@@ -48,6 +48,33 @@ export default function Resume() {
                     </ul>
                 </div>
             </div>
+            <div className='project-exp'>
+                <div className='project-exp-title'>
+                    PROJECT EXPERIENCE
+                </div>
+                <div className='project-exp-entry'>
+                    <div className='project-exp-entry-header'>
+                        <div className='project-exp-name'>
+                            <b>Cloud Resume Challenge – AWS Full-Stack Project</b>
+                        </div>
+                        <div className='project-exp-year'>
+                            2025
+                        </div>
+                    </div>
+                    <div className='project-exp-entry-title'>
+                        <i>Personal Project | johnjpark.com</i>
+                    </div>
+                    <div className='project-exp-detail'>
+                        <ul>
+                            <li>Deployed a static website on S3 and CloudFront with a custom domain and Terraform for infrastructure as Code.</li>
+                            <li>Built a serverless backend using Lambda (Python) and DynamoDB to track page views.</li>
+                            <li>Implemented CI/CD with GitHub Actions and OIDC, automating S3 deployments and CloudFront cache invalidation.</li>
+                            <li>Managed DNS and SSL via Route 53 and ACM, securing HTTPS and subdomain delegation across AWS accounts.</li>
+                        </ul>
+                        <b>Tech Stack:</b> AWS (S3, CloudFront, Lambda, DynamoDB, Route 53, IAM, ACM), Terraform, GitHub Actions, Python, React
+                    </div>
+                </div>
+            </div>
             <div className='work'>
                 <div className='work-title'>
                     WORK EXPERIENCE
@@ -55,14 +82,14 @@ export default function Resume() {
                 <div className='work-entry'>
                     <div className='work-entry-header'>
                         <div className='company'>
-                            Park & Gold, LLC
+                            <b>Park & Gold, LLC</b>
                         </div>
                         <div className='work-year'>
                             Jun 2023 - Present
                         </div>
                     </div>
                     <div className='job-title'>
-                        IT Manager
+                        <i>IT Operations Manager</i>
                     </div>
                     <div className='work-detail'>
                         <ul className='work-list'>
@@ -77,14 +104,14 @@ export default function Resume() {
                 <div className='work-entry'>
                     <div className='work-entry-header'>
                         <div className='company'>
-                            LG Display America
+                            <b>LG Display America</b>
                         </div>
                         <div className='work-year'>
                             Oct 2012 - Jun 2023
                         </div>
                     </div>
                     <div className='job-title'>
-                        Customer Support Engineer/Quality Assurance
+                        <i>Customer Support Engineer/Quality Assurance</i>
                     </div>
                     <div className='work-detail'>
                         <ul className='work-list'>
@@ -105,34 +132,14 @@ export default function Resume() {
                 <div className='work-entry'>
                     <div className='work-entry-header'>
                         <div className='company'>
-                            Vivian Heritage
-                        </div>
-                        <div className='work-year'>
-                            Jan 2011 - Oct 2012
-                        </div>
-                    </div>
-                    <div className='job-title'>
-                        Operations Manager
-                    </div>
-                    <div className='work-detail'>
-                        <ul className='work-list'>
-                            <li>Developed quality control processes ensuring compliance with industry standards.</li>
-                            <li>Monitored production data to identify defects and implemented corrective actions.</li>
-                            <li>Managed technical communications, providing guidance to resolve product issues.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='work-entry'>
-                    <div className='work-entry-header'>
-                        <div className='company'>
-                            University of California, Riverside
+                            <b>University of California, Riverside</b>
                         </div>
                         <div className='work-year'>
                             Apr 2010 - Dec 2010
                         </div>
                     </div>
                     <div className='job-title'>
-                        Application Developer Intern
+                        <i>Application Developer Intern</i>
                     </div>
                     <div className='work-detail'>
                         <ul className='work-list'>

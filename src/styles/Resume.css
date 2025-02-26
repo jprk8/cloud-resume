@@ -1,7 +1,7 @@
 .resume {
     font-family: Montserrat;
     padding: 40px 20px;
-    width: 888px;
+    width: 1030px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -28,27 +28,28 @@
 }
 
 .education,
-.work {
+.work,
+.project-exp {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 .education-title,
-.work-title {
+.work-title,
+.project-exp-title {
     border-bottom: 1px solid var(--text-color);
     margin-bottom: -10px;
     font-weight: 600;
 }
 
-.school {
+.school,
+.work-entry-header,
+.project-exp-entry-header {
     display: flex;
     justify-content: space-between;
 }
 
-.school-name {
-    font-weight: 600;
-}
 
 .study,
 .school-year {
@@ -67,16 +68,8 @@
 }
 
 ul.cert-list,
-ul.work-list {
+ul.work-list,
+.project-exp-detail ul {
     margin: 0;
     padding: 0 20px;
-}
-
-.work-entry-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.company {
-    font-weight: 600;
 }
