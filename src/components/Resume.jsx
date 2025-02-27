@@ -3,12 +3,13 @@ import '../styles/Resume.css'
 export default function Resume() {
     return (
         <div className='resume'>
-            <div className='resume-header'>
+            <div className='resume-title'>RESUME</div>
+            {/* <div className='resume-header'>
                 <div className='resume-name'>John J. Park</div>
                 <div className='resume-contact'>
                     ❖ San Diego, CA ❖ johnjpark.com
                 </div>
-            </div>
+            </div> */}
             <div className='education'>
                 <div className='education-title'>
                     EDUCATION

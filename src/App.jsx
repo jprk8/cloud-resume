@@ -27,34 +27,42 @@ function App() {
   const resumeRef = useRef(null);
   const aboutRef = useRef(null);
 
-  function handleMenuClick(item) {
-    if (item === 'resume') {
-      resumeRef.current.showModal();
-      resumeRef.current.classList.add('open');
-    } else if (item === 'about') {
-      aboutRef.current.showModal();
-      aboutRef.current.classList.add('open');
+  function handleMenuClick(section) {
+    if (section === 'about') {
+      aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (section === 'resume') {
+      resumeRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
-    document.addEventListener('keydown', handleKeyDown);
   }
 
-  function handleClose(modalRef) {
-    if (modalRef?.current) {
-      modalRef.current.classList.remove('open');
-      setTimeout(() => {
-        modalRef.current.close();
-      }, 300);
-    }
-    document.removeEventListener('keydown', handleKeyDown);
-  }
+  // function handleMenuClick(item) {
+  //   if (item === 'resume') {
+  //     resumeRef.current.showModal();
+  //     resumeRef.current.classList.add('open');
+  //   } else if (item === 'about') {
+  //     aboutRef.current.showModal();
+  //     aboutRef.current.classList.add('open');
+  //   }
+  //   document.addEventListener('keydown', handleKeyDown);
+  // }
 
-  function handleKeyDown(e) {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      if (resumeRef.current?.open) handleClose(resumeRef);
-      if (aboutRef.current?.open) handleClose(aboutRef);
-    }
-  }
+  // function handleClose(modalRef) {
+  //   if (modalRef?.current) {
+  //     modalRef.current.classList.remove('open');
+  //     setTimeout(() => {
+  //       modalRef.current.close();
+  //     }, 300);
+  //   }
+  //   document.removeEventListener('keydown', handleKeyDown);
+  // }
+
+  // function handleKeyDown(e) {
+  //   if (e.key === 'Escape') {
+  //     e.preventDefault();
+  //     if (resumeRef.current?.open) handleClose(resumeRef);
+  //     if (aboutRef.current?.open) handleClose(aboutRef);
+  //   }
+  // }
 
   useEffect(() => {
     const getCount = async() => {
@@ -64,15 +72,15 @@ function App() {
     getCount();
   }, []);
 
-  function handleClickOutside(e) {
-    if (e.target === resumeRef.current) {
-      e.preventDefault();
-      handleClose(resumeRef);
-    } else if (e.target === aboutRef.current) {
-      e.preventDefault();
-      handleClose(aboutRef);
-    }
-  }
+  // function handleClickOutside(e) {
+  //   if (e.target === resumeRef.current) {
+  //     e.preventDefault();
+  //     handleClose(resumeRef);
+  //   } else if (e.target === aboutRef.current) {
+  //     e.preventDefault();
+  //     handleClose(aboutRef);
+  //   }
+  // }
 
   return (
     <>
@@ -80,21 +88,27 @@ function App() {
         <Profile />
         <Menu handleMenuClick={handleMenuClick} />
         <Counter count={count}/>
+        <section ref={aboutRef}>
+          <About />
+        </section>
+        <section ref={resumeRef}>
+          <Resume />
+        </section>
       </main>
 
-      <dialog ref={resumeRef} className='resume-modal' onClick={handleClickOutside}>
+      {/* <dialog ref={resumeRef} className='resume-modal' onClick={handleClickOutside}>
         <Resume />
         <button className='dialog-btn' onClick={() => handleClose(resumeRef)}>
           <img src={closeBtn} alt='' />
         </button>
       </dialog>
 
-        <dialog ref={aboutRef} className='about-modal' onClick={handleClickOutside}>
-          <About />
-          <button className='dialog-btn' onClick={() => handleClose(aboutRef)}>
-            <img src={closeBtn} alt='' />
-          </button>
-        </dialog>
+      <dialog ref={aboutRef} className='about-modal' onClick={handleClickOutside}>
+        <About />
+        <button className='dialog-btn' onClick={() => handleClose(aboutRef)}>
+          <img src={closeBtn} alt='' />
+        </button>
+      </dialog> */}
       <Footer />
     </>
   )

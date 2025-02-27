@@ -3,6 +3,7 @@ import '../styles/About.css'
 export default function About() {
     return (
         <div className='about'>
+            <div className='about-title'>ABOUT</div>
             <div className='about-header'>
                 <h2>Welcome to my website!</h2>
                 <p className='about-header-text'>I built this website as part of the <i>Cloud Resume Challenge</i>, an initiative that demonstrates hands-on experience with cloud services and infrastructure. My goal was to strengthen my cloud computing skills while gaining real-world practice in building and deploying end-to-end solutions.</p>

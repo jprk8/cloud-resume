@@ -6,16 +6,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--background-color);
+
+  /* Calculating margin-top of Profile and margin-bottom of Counter */
+  --profile-height: 263px;
+  --menu-height: 70px;
+  --counter-height: 20px;
+  --total-fixed: calc(var(--profile-height) + var(--menu-height) + var(--counter-height) + 160px);
+  --vertical-space: calc((100vh - var(--total-fixed)) / 2);
 }
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex: 1;
   gap: 80px;
+  min-height: 100vh;
 }
 
 .resume-modal,
@@ -69,4 +78,26 @@ main {
     transform: translateY(-50%, -50%);
     opacity: 1;
   }
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #171717;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
 }

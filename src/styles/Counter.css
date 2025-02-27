@@ -1,4 +1,6 @@
 .counter {
     font-size: 13px;
     text-align: center;
+    height: var(--counter-height);
+    margin-bottom: var(--vertical-space);
 }
