@@ -2,12 +2,10 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* background-color: #222; */
+    align-items: center;
+    gap: 10px;
     color: var(--text-color);
-    width: 750px;
     line-height: 1.8;
-    /* margin-top: -60px; */
 }
 
 .about-title {
@@ -16,12 +14,15 @@
     text-align: center;
 }
 
-.about-header h2 {
+.about-header {
+    width: 750px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 20px;
     margin-bottom: 10px;
 }
 
-.about-content h3 {
-    text-decoration: underline;
+.about-header h2 {
+    margin-bottom: 10px;
 }
 
 .about-content ul {
@@ -30,4 +31,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 750px;
+}
+
+.about-content a {
+    color: inherit;
 }
