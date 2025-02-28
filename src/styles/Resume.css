@@ -1,7 +1,7 @@
 .resume {
     font-family: Montserrat;
     padding: 40px 20px;
-    width: 1030px;
+    max-width: 1030px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -77,4 +77,18 @@ ul.work-list,
 .project-exp-detail ul {
     margin: 0;
     padding: 0 20px;
+}
+
+@media (max-width: 550px) {
+    .school,
+    .work-entry-header,
+    .project-exp-entry-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .resume {
+        padding: 10px;
+    }
 }

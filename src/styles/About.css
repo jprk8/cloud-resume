@@ -6,6 +6,7 @@
     gap: 10px;
     color: var(--text-color);
     line-height: 1.8;
+    max-width: 770px;
 }
 
 .about-title {
@@ -15,7 +16,7 @@
 }
 
 .about-header {
-    width: 620px;
+    max-width: 620px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -35,9 +36,19 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 770px;
 }
 
 .about-content a {
     color: inherit;
+}
+
+@media (max-width: 550px) {
+    .about {
+        padding: 0;
+    }
+
+    .about-header,
+    .about-content {
+        margin: 20px;
+    }
 }

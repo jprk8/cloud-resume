@@ -29,7 +29,7 @@ export default function About() {
                     </a>
                 </p>
             </div>
-            <img src={diagram} alt=''/>
+            <img className='diagram-img' src={diagram} alt=''/>
         </div>
     )
 }

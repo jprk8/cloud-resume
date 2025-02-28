@@ -14,3 +14,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 50px 100px;
 }
+
+@media (max-width: 550px) {
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

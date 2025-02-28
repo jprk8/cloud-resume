@@ -9,6 +9,7 @@
     position: sticky;
     top: 20px;
     height: var(--menu-height);
+    z-index: 1000;
 }
 
 .menu-btn {
@@ -23,4 +24,22 @@
 
 .menu-btn:hover {
     border-bottom: 1px solid var(--text-color);
+}
+
+@media (max-width: 550px) {
+    .menu {
+        height: max-content;
+        width: 100%;
+        gap: 0;
+        border-radius: 0;
+        padding: 0;
+        top: 0;
+        padding: 15px 0;
+        justify-content: space-evenly;
+    }
+
+    .menu-btn {
+        padding: 0;
+        width: max-content;
+    }
 }
