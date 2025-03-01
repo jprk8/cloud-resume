@@ -7,6 +7,7 @@ import Profile from './components/Profile'
 import Menu from './components/Menu'
 import Counter from './components/Counter'
 import Project from './components/Project'
+import Contact from './components/Contact'
 
 //get count value from aws
 async function fetchCount() {
@@ -27,6 +28,7 @@ function App() {
   const resumeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
+  const contactRef = useRef(null);
 
   function handleMenuClick(section) {
     if (section === 'about') {
@@ -34,7 +36,9 @@ function App() {
     } else if (section === 'resume') {
       resumeRef.current?.scrollIntoView({ behavior: 'smooth' });
     } else if (section === 'projects') {
-      projectRef.current?.scrollIntoView({ behavior: 'smooth' })
+      projectRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (section === 'contact') {
+      contactRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
@@ -60,6 +64,9 @@ function App() {
         </section>
         <section ref={projectRef}>
           <Project />
+        </section>
+        <section ref={contactRef}>
+          <Contact />
         </section>
       </main>
 

@@ -6,7 +6,7 @@ export default function Menu({ handleMenuClick }) {
             <button className='menu-btn' onClick={() => handleMenuClick('about')}>ABOUT</button>
             <button className='menu-btn' onClick={() => handleMenuClick('resume')}>RESUME</button>
             <button className='menu-btn' onClick={() => handleMenuClick('projects')}>PROJECTS</button>
-            <button className='menu-btn'>CONTACT</button>
+            <button className='menu-btn' onClick={() => handleMenuClick('contact')}>CONTACT</button>
         </div>
     )
 }
