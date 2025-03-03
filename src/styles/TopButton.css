@@ -1,0 +1,41 @@
+.top-btn {
+    position: fixed;
+    bottom: -100px;
+    right: 50px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    filter: brightness(0.7);
+    transition: bottom 400ms ease-in-out;
+    font-size: 14px;
+}
+
+.top-btn.visible {
+    bottom: 10px;
+}
+
+.top-btn:hover {
+    filter: brightness(1);
+}
+
+@media (max-width: 1024px) {
+    .top-btn {
+        right: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .top-btn div {
+        display: none;
+    }
+
+    .top-btn.visible {
+        bottom: 24px;
+    }
+}

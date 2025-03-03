@@ -28,59 +28,6 @@ main {
   width: 100%;
 }
 
-.resume-modal,
-.about-modal {
-  padding: 0;
-  border: none;
-  border-radius: 10px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  opacity: 0;
-  transition: transform 500ms ease, opacity 500ms ease;
-  background-color: #222;
-}
-
-::backdrop {
-  background-color: black;
-  opacity: 0.6;
-}
-
-.open {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
-.dialog-btn {
-  position: absolute;
-  top: 15px;
-  right: 30px;
-  border-radius: 50%;
-  background-color: #161616;
-  border: 2px solid var(--text-color);
-  cursor: pointer;
-  padding: 0;
-}
-
-.resume-modal > *:first-child {
-  flex: 1;
-  overflow: auto;
-  max-height: 90vh;
-}
-
-@keyframes drop-in {
-  0% {
-    transform: translate(-50%, -60%);
-    opacity: 0.3;
-  }
-
-  100% {
-    transform: translateY(-50%, -50%);
-    opacity: 1;
-  }
-}
-
 section {
   scroll-margin-top: 100px;
 }

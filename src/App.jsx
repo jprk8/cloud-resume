@@ -8,6 +8,7 @@ import Menu from './components/Menu'
 import Counter from './components/Counter'
 import Project from './components/Project'
 import Contact from './components/Contact'
+import TopButton from './components/TopButton'
 
 //get count value from aws
 async function fetchCount() {
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <>
+
       <main>
         <Profile />
         <Menu handleMenuClick={handleMenuClick} />
@@ -69,7 +71,7 @@ function App() {
           <Contact />
         </section>
       </main>
-
+      <TopButton />
       <Footer />
     </>
   )
