@@ -42,3 +42,7 @@
     display: flex;
     gap: 14px;
 }
+
+.project-description {
+    line-height: 1.5;
+}
