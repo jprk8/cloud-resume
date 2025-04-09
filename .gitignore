@@ -26,3 +26,6 @@ dist-ssr
 # Terraform
 infra-dev
 infra
+
+Resume-old.jsx
+Resume-old.css

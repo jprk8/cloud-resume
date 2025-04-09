@@ -4,10 +4,10 @@
     max-width: 1030px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
     color: var(--text-color);
-    line-height: 1.75;
     background-color: var(--background-color);
+    align-items: center;
 }
 
 .resume-title {
@@ -16,79 +16,17 @@
     text-align: center;
 }
 
-.resume-header {
-    background-color: #21232e;
-    color: white;
-    margin: -40px -20px;
-    padding: 10px 20px;
-    border-bottom: 3px solid rgb(153, 126, 59);
-}
-
-.resume-name {
-    font-size: 24px;
+.resume-dl-btn {
+    padding: 20px 24px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: black;
     font-weight: 600;
+    font-size: 18px;
 }
 
-/* .education {
-    margin-top: 30px;
-} */
-
-.education,
-.work,
-.project-exp {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.education-title,
-.work-title,
-.project-exp-title {
-    border-bottom: 1px solid var(--text-color);
-    margin-bottom: -10px;
-    font-weight: 600;
-}
-
-.school,
-.work-entry-header,
-.project-exp-entry-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.study,
-.school-year {
-    font-weight: 400;
-}
-
-.cert-title {
-    font-weight: 600;
-    border-bottom: 1px solid var(--text-color);
-    margin-bottom: 5px;
-}
-
-.cert-container {
-    display: flex;
-    gap: 10px;
-}
-
-ul.cert-list,
-ul.work-list,
-.project-exp-detail ul {
-    margin: 0;
-    padding: 0 20px;
-}
-
-@media (max-width: 550px) {
-    .school,
-    .work-entry-header,
-    .project-exp-entry-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .resume {
-        padding: 10px;
-    }
+.resume-dl-btn:hover {
+    outline: 2px solid var(--text-color);
 }
