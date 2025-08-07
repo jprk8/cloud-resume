@@ -24,8 +24,22 @@ dist-ssr
 *.sw?
 
 # Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.lock.info
+*.pem
+.terraformrc
+terraform.rc
+
 infra-dev
-infra
 
 Resume-old.jsx
 Resume-old.css
