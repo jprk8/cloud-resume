@@ -6,8 +6,8 @@ export default function Resume() {
         <div className='resume'>
             <div className='resume-title'>RESUME</div>
             <img src={resumeIcon} alt='' width='150px' />
-            <a href='/resume-johnpark-web.pdf' download>
-                <button className='resume-dl-btn'>Download Resume</button>
+            <a href='https://www.linkedin.com/in/john-park-98590488/' noopener noreferrer target="_blank">
+                Linkedin Profile
             </a>
         </div>
     )

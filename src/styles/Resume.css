@@ -30,3 +30,8 @@
 .resume-dl-btn:hover {
     outline: 2px solid var(--text-color);
 }
+
+.resume a {
+    color: inherit;
+    font-size: 20px;
+}
